@@ -1,0 +1,6 @@
+# Files present in the repo that must NOT be served publicly.
+.git
+README.md
+.gitignore
+.assetsignore
+wrangler.jsonc

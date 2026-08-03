@@ -1,0 +1,7 @@
+{
+  // Static site — Cloudflare serves the files in this repo directly.
+  // No build step; see .assetsignore for files that must not be served.
+  "name": "personal-website",
+  "compatibility_date": "2026-08-03",
+  "assets": { "directory": "./" }
+}

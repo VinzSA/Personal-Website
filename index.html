@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vincenzo Salerno</title>
+<meta name="description" content="MSc Finance (Quantitative Finance) at Bocconi. Financial Engineer Intern at Rationis. I love building things where markets and technology meet.">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salernovincenzo.com/">
+<meta property="og:title" content="Vincenzo Salerno">
+<meta property="og:description" content="MSc Finance (Quantitative Finance) at Bocconi. Financial Engineer Intern at Rationis. I love building things where markets and technology meet.">
+<meta property="og:image" content="https://salernovincenzo.com/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vincenzo Salerno">
+<meta name="twitter:description" content="MSc Finance (Quantitative Finance) at Bocconi. Financial Engineer Intern at Rationis. I love building things where markets and technology meet.">
+<meta name="twitter:image" content="https://salernovincenzo.com/img/og-image.jpg">
+
+<meta name="theme-color" content="#FBFBFC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FBFBFC'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%2316181D'%3EV%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* PALETTE — Grafite: cool near-white paper, ink black, one petrol signature */
+    --bg: #FBFBFC;
+    --ink: #16181D;
+    --muted: #6B7280;
+    --note: #43484E;
+    --line: #EAEBEE;
+    --signature: #1E4B54; /* petrol — kicker, grade, selection only */
+
+    --serif: "Newsreader", Georgia, serif;
+    --mono: "IBM Plex Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181D;
+      --ink: #FBFBFC;
+      --muted: #9CA3AF;
+      --note: #C3C7CD;
+      --line: #2A2D33;
+      --signature: #8FB8C2;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--line);
+  }
+  a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+  a:focus-visible { outline: 2px solid var(--signature); outline-offset: 3px; }
+  ::selection { background: var(--signature); color: var(--bg); }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 88px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  header .mark { color: var(--muted); }
+  header nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  header nav a { text-decoration: none; color: var(--muted); text-transform: uppercase; }
+  header nav a:hover { color: var(--ink); }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--signature);
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: clamp(40px, 8vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  .lede {
+    font-size: 23px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .bio p { margin-bottom: 20px; }
+  .bio .quiet { color: var(--muted); font-size: 17px; }
+  .bio strong { font-weight: 600; }
+
+  ol.interests {
+    list-style: none;
+    counter-reset: n;
+    margin-bottom: 26px;
+  }
+  ol.interests li {
+    counter-increment: n;
+    padding: 6px 0;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+  ol.interests li::before {
+    content: counter(n, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  section { margin-top: 72px; }
+  h2 {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 22px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .row {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; }
+  .row .when {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    min-width: 84px;
+    flex-shrink: 0;
+  }
+  .row .what { font-size: 18px; }
+  .row .what .note {
+    display: block;
+    margin-top: 3px;
+    color: var(--note);
+    font-size: 16.5px;
+    line-height: 1.55;
+  }
+  .row .what em { font-style: italic; color: var(--muted); }
+  .grade {
+    font-style: italic;
+    color: var(--note);
+  }
+
+  .sportline {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 18px 0 24px;
+  }
+  @media (max-width: 520px) {
+    header nav { gap: 12px; }
+  }
+
+  .contact p { margin-bottom: 14px; }
+  .contact .mail {
+    font-size: 22px;
+    font-style: italic;
+  }
+  .links {
+    margin-top: 22px;
+    display: flex;
+    gap: 20px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  footer {
+    margin-top: 96px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <span class="mark">VINCENZO SALERNO</span>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#sport">Sport</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="kicker">I am</p>
+    <h1>Vincenzo Salerno</h1>
+
+    <p class="lede">I'm 22, I'm a student at Bocconi, and I love building things.</p>
+
+    <div class="bio">
+      <p>Currently I'm interning at <a href="https://rationis-tech.com">Rationis</a>, a quant fintech in Milan, where I work on the MCP server connecting portfolio analytics to language models.</p>
+      <p>I grew up in Agropoli, a small town on the Cilento coast; Milan since 2022. I take on things before I feel ready for them, and I ask a lot of questions along the way. What interests me most is AI, finance, and markets.</p>
+      <p class="quiet">Some of what occupies me:</p>
+      <ol class="interests">
+        <li>Learning as much as I can about AI agents and LLMs</li>
+        <li>Quantitative finance, macroeconomics, and markets</li>
+        <li>Technology &times; strategy, and where they meet</li>
+        <li>Basketball, training, and competing at anything</li>
+      </ol>
+    </div>
+
+    <section id="work">
+      <h2>Work</h2>
+      <div class="row">
+        <span class="when">2026</span>
+        <span class="what">Financial Engineer Intern · <a href="https://rationis-tech.com">Rationis</a>, Milan
+          <span class="note">Model Context Protocol server connecting portfolio analytics and risk tools to natural-language queries, with the operating rules that keep the agent's answers correct.</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="when">2025</span>
+        <span class="what">Structured Finance &amp; M&amp;A Intern · Banca Sistema, Milan
+          <span class="note">Repayment curves and cash-flow projections for a €100m pawn-backed loan portfolio; valuation review for a regional acquisition.</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="when">2025</span>
+        <span class="what">Research Assistant, Behavioral Economics · Frankfurt School
+          <span class="note">A year-long funded assistantship with Professor Grunewald. Analyzed two large consumer datasets in Python and Stata, studying search behavior and purchase propensity across online marketplaces.</span>
+        </span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="row">
+        <span class="when">2026</span>
+        <span class="what">rationis-mcp
+          <span class="note">Production MCP server for quant finance and portfolio queries (proprietary).</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="when">2026</span>
+        <span class="what">Hermes
+          <span class="note">Personal AI agent in the terminal, built on the Anthropic API. Telegram interface, persistent memory, and live integration with my Obsidian vault.</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="when">2026</span>
+        <span class="what">AnaSafe
+          <span class="note">Multi-agent system turning patient records into pre-operative anesthesia decision briefs. 3rd place, ETH Zurich AI &amp; Health hackathon.</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="when">2026</span>
+        <span class="what"><a href="https://github.com/VinzSA/Interactive-investment-and-financial-model">Interactive investment &amp; financial model</a>
+          <span class="note">Interactive web app for investment and financial modelling, built in Python.</span>
+        </span>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="row">
+        <span class="when">2025&ndash;current</span>
+        <span class="what">MSc Finance, Quantitative Finance major · Bocconi University <span class="note">Bocconi Sport Athletes Award.</span></span>
+      </div>
+      <div class="row">
+        <span class="when">Fall 2026</span>
+        <span class="what"><em>Exchange</em> · University of Wisconsin–Madison <span class="note">Courses in the joint PhD in Economics and Finance.</span></span>
+      </div>
+      <div class="row">
+        <span class="when">2022–25</span>
+        <span class="what">BSc International Economics &amp; Management · Bocconi University · <span class="grade">110/110 cum laude</span></span>
+      </div>
+      <div class="row">
+        <span class="when">2025</span>
+        <span class="what"><em>Exchange</em> · Frankfurt School of Finance &amp; Management <span class="note">Top 5% of students by GPA.</span></span>
+      </div>
+    </section>
+
+    <section id="sport">
+      <h2>Sport</h2>
+      <p>I played basketball semi-professionally in Serie C Lombardy while carrying a full course load at Bocconi. Last season I finished third in the scoring table, averaging 16.3 points per game.</p>
+      <p class="sportline">SERIE C LOMBARDY · 3RD IN SCORING TABLE</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>I love speaking with people and learning from them, and I'm always open to opportunities — reach out.</p>
+      <p class="mail"><a href="mailto:vincenzoasalerno@gmail.com">vincenzoasalerno@gmail.com</a></p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/vincenzo-antoniosalerno/">LinkedIn</a>
+        <a href="https://github.com/VinzSA">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 VINCENZO SALERNO</footer>
+
+</div>
+</body>
+</html>

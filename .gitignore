@@ -1,0 +1,6 @@
+# Only index.html and img/ are part of the website.
+# Everything else in this folder is personal work and must stay private.
+*.pdf
+*.do
+.claude/
+site/

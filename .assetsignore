@@ -1,5 +1,6 @@
 # Files present in the repo that must NOT be served publicly.
 .git
+.wrangler/
 README.md
 .gitignore
 .assetsignore
